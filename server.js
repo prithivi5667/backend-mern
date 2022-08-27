@@ -6,7 +6,7 @@ const port = process.env.PORT || 8000;
 const passport = require('passport');
 
 const users = require('./routes/api/users');
-const Post=require('./routes/api/Transaction')
+const Transaction=require('./routes/api/Transaction')
 const Msg=require('./routes/api/Msg')
 // Middleware
 app.use(cors());
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/users', users);
 app.use('/api/msg', Msg);
-app.use("/api/post",Post)
+app.use("/api/post",Transaction)
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
